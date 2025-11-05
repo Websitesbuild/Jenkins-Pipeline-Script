@@ -49,6 +49,13 @@ pipeline
 			{
 				echo 'Build successful'
 			}
-		}		
+		}
+		stage('Extra Success')
+		{
+			steps
+			{
+				echo 'Extra Stage successful'
+			}
+		}	
       }
 }	
