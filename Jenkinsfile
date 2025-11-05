@@ -1,11 +1,7 @@
 pipeline
 {
 	agent any
-	tools
-	{
-		maven 'MAVEN_HOME'
-	}
-	
+
 	stages
 	{
 		stage('Welcome Stage')
@@ -20,7 +16,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn clean'
+				echo 'This is a Clean Stage'
 			}
 		}	
         stage('Clean Success Stage')
@@ -34,14 +30,14 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn test'
+				echo 'This is a Test Stage'
 			}
 		}		
 		stage('Build & Install Stage')
 		{
 			steps
 			{
-				sh 'mvn install'
+				echo 'This is a Build success stage'
 			}
 		}		
 		
